@@ -8,7 +8,7 @@ class Pray < Formula
   url "https://github.com/kiskolabs/pray/archive/refs/tags/v1.2.0.tar.gz"
   # Fill after tagged release:
   # shasum -a 256 <(curl -sL https://github.com/kiskolabs/pray/archive/refs/tags/v1.2.0.tar.gz)
-  sha256 ""
+  sha256 "fa3ff3de4172a3828f841c312e37c80178df4d14adc993cac740f106257dc966"
   license "MIT"
   head "https://github.com/kiskolabs/pray.git", branch: "main"
 
