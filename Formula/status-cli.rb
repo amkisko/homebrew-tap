@@ -5,10 +5,10 @@
 class StatusCli < Formula
   desc "Status page CLI — search catalog and check live status"
   homepage "https://github.com/amkisko/status-cli.rs"
-  url "https://github.com/amkisko/status-cli.rs/archive/refs/tags/v0.1.0.tar.gz"
+  url "https://github.com/amkisko/status-cli.rs/archive/refs/tags/v0.2.0.tar.gz"
   # Fill after first tagged release:
   # shasum -a 256 <(curl -sL https://github.com/amkisko/status-cli.rs/archive/refs/tags/v0.1.0.tar.gz)
-  sha256 "658cc3616426cb62484fc09900544686a5fcec5f054bebdaa42a010a9d541cf6"
+  sha256 "8a6b1f862bb8cd705e8d75de625ea6477da7b289ac19ef372ee0bb213a62ed4e"
   license "MIT"
   head "https://github.com/amkisko/status-cli.rs.git", branch: "main"
 
