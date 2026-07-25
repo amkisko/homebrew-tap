@@ -8,7 +8,7 @@ class StatusCli < Formula
   url "https://github.com/amkisko/status-cli.rs/archive/refs/tags/v0.1.0.tar.gz"
   # Fill after first tagged release:
   # shasum -a 256 <(curl -sL https://github.com/amkisko/status-cli.rs/archive/refs/tags/v0.1.0.tar.gz)
-  sha256 ""
+  sha256 "658cc3616426cb62484fc09900544686a5fcec5f054bebdaa42a010a9d541cf6"
   license "MIT"
   head "https://github.com/amkisko/status-cli.rs.git", branch: "main"
 
