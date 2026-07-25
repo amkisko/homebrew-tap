@@ -6,7 +6,7 @@ class ScoutCli < Formula
   desc "ScoutAPM CLI — query apps, endpoints, traces, metrics, and errors"
   homepage "https://github.com/amkisko/scout-cli.rs"
   url "https://github.com/amkisko/scout-cli.rs/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+  sha256 "37fdd47ef3750cee00f46c3494c55736a318f8bfd774ef6f385eb16124197b54"
   license "MIT"
   head "https://github.com/amkisko/scout-cli.rs.git", branch: "main"
 
