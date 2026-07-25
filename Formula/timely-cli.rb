@@ -8,7 +8,7 @@ class TimelyCli < Formula
   url "https://github.com/amkisko/timely-cli.rs/archive/refs/tags/v0.1.0.tar.gz"
   # Fill after first tagged release:
   # shasum -a 256 <(curl -sL https://github.com/amkisko/timely-cli.rs/archive/refs/tags/v0.1.0.tar.gz)
-  sha256 ""
+  sha256 "36f09e334d8831a5cf2dd377a130be97c2172eeccd5e1df77cb08c4c663691e6"
   license "MIT"
   head "https://github.com/amkisko/timely-cli.rs.git", branch: "main"
 
