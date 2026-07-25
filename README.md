@@ -34,7 +34,32 @@ brew install --HEAD amkisko/tap/bmx
 brew install --HEAD amkisko/tap/pray
 ```
 
-Stable tarball installs need a tagged GitHub release and a filled `sha256` in the formula.
+## Automated formula bumps
+
+When a project pushes a `v*` tag, its `homebrew-tap.yml` workflow dispatches into this repository. The `bump-formula` workflow then:
+
+1. waits for the GitHub source archive to exist
+2. computes `sha256`
+3. updates `Formula/<name>.rb` `url` + `sha256`
+4. commits to `main`
+
+### One-time secret setup
+
+Create a fine-grained PAT (or classic PAT) with access to **this** repository:
+
+- Contents: Read and write
+- Metadata: Read
+
+Add it as repository secret `HOMEBREW_TAP_TOKEN` on each upstream project that should bump formulas (`bmx.rs`, `timely-cli.rs`, `scout-cli.rs`, `status-cli.rs`, `kiskolabs/pray`).
+
+Manual bump from this repo:
+
+```bash
+gh workflow run bump-formula.yml \
+  -f formula=bmx \
+  -f tag=v0.1.3 \
+  -f repository=amkisko/bmx.rs
+```
 
 ## License
 
