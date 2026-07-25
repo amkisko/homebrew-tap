@@ -34,31 +34,32 @@ brew install --HEAD amkisko/tap/bmx
 brew install --HEAD amkisko/tap/pray
 ```
 
-## Automated formula bumps
+## Local formula bumps (no GitHub secrets)
 
-When a project pushes a `v*` tag, its `homebrew-tap.yml` workflow dispatches into this repository. The `bump-formula` workflow then:
-
-1. waits for the GitHub source archive to exist
-2. computes `sha256`
-3. updates `Formula/<name>.rb` `url` + `sha256`
-4. commits to `main`
-
-### One-time secret setup
-
-Create a fine-grained PAT (or classic PAT) with access to **this** repository:
-
-- Contents: Read and write
-- Metadata: Read
-
-Add it as repository secret `HOMEBREW_TAP_TOKEN` on each upstream project that should bump formulas (`bmx.rs`, `timely-cli.rs`, `scout-cli.rs`, `status-cli.rs`, `kiskolabs/pray`).
-
-Manual bump from this repo:
+After you push a `v*` tag to the upstream GitHub repo, bump the formula locally:
 
 ```bash
-gh workflow run bump-formula.yml \
-  -f formula=bmx \
-  -f tag=v0.1.3 \
-  -f repository=amkisko/bmx.rs
+# from this tap checkout
+make bump FORMULA=bmx TAG=v0.1.3 COMMIT=1 PUSH=1
+
+# or
+./scripts/bump-formula.sh --formula timely-cli --tag v0.1.0 --commit --push
+./scripts/bump-formula.sh --formula pray --tag v1.2.0 --commit --push
+```
+
+From an upstream tool repo (sibling checkout expected at `../homebrew-tap`):
+
+```bash
+make bump-homebrew
+```
+
+That target reads `Cargo.toml` version, fetches the GitHub archive checksum, updates `Formula/*.rb`, and commits in the tap. Push the tap when ready.
+
+Optional packaging mirror (keeps in-repo `packaging/homebrew/*.rb` in sync):
+
+```bash
+./scripts/bump-formula.sh --formula bmx --tag v0.1.3 \
+  --mirror ../bmx.rs/packaging/homebrew/bmx.rb --commit
 ```
 
 ## License
