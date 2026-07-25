@@ -5,10 +5,10 @@
 class TimelyCli < Formula
   desc "Timely API CLI, MCP server, and local Memory reader"
   homepage "https://github.com/amkisko/timely-cli.rs"
-  url "https://github.com/amkisko/timely-cli.rs/archive/refs/tags/v0.1.0.tar.gz"
+  url "https://github.com/amkisko/timely-cli.rs/archive/refs/tags/v0.1.1.tar.gz"
   # Fill after first tagged release:
   # shasum -a 256 <(curl -sL https://github.com/amkisko/timely-cli.rs/archive/refs/tags/v0.1.0.tar.gz)
-  sha256 "36f09e334d8831a5cf2dd377a130be97c2172eeccd5e1df77cb08c4c663691e6"
+  sha256 "64794896a2702d58f569677ee5cfd937d934d9f829253d1aaece9c80676d1201"
   license "MIT"
   head "https://github.com/amkisko/timely-cli.rs.git", branch: "main"
 
