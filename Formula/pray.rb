@@ -5,10 +5,10 @@
 class Pray < Formula
   desc "Reference CLI for Prayfile — package manager for pre-inference input"
   homepage "https://pray.kisko.dev"
-  url "https://github.com/kiskolabs/pray/archive/refs/tags/v1.3.0.tar.gz"
+  url "https://github.com/kiskolabs/pray/archive/refs/tags/v1.4.0.tar.gz"
   # Fill after tagged release:
   # shasum -a 256 <(curl -sL https://github.com/kiskolabs/pray/archive/refs/tags/v1.2.0.tar.gz)
-  sha256 "eb3d5154acacb6bbb0bac4d77358f70db005e8a101583b4c72afaacead0743f1"
+  sha256 "0a866e72aa3c490fcd09f0313a2086dbb8b7e4ac8a6b9b0dc0f5ed0f926c4d40"
   license "MIT"
   head "https://github.com/kiskolabs/pray.git", branch: "main"
 
